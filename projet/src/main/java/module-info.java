@@ -1,4 +1,5 @@
 module morphing {
+    requires transitive java.desktop;
     requires javafx.controls;
     requires javafx.fxml;
 

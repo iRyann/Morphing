@@ -73,6 +73,7 @@ public class ImageG {
             ImageIO.write(image, format, new File(path));
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Impossible d'enregistrer l'image");
         }
     }
 

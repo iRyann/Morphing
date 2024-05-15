@@ -59,6 +59,16 @@ public class Line {
         return this.vector.getX()*y.getVector().getX()+this.vector.getY()*y.getVector().getY();
     }
 
+    public Couple<Double,Double> vectorNormalUnitaire(){
+        // Rotation du vecteur de pi/2
+        double x = -this.vector.getY();
+        double y = this.vector.getX();
+        double norme = Math.sqrt(x*x+y*y);
+        return new Couple<Double,Double>(x/norme, y/norme);
+    }
+
+    
+
     public double hauteurRelative(Point x){
 
         // Calcul de [PX] et [PQ]
@@ -86,7 +96,7 @@ public class Line {
         // Dénominateur
         double den = this.norme();
 
-        return Math.abs(num/den);
+        return num/den;
     }
 
 

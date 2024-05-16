@@ -35,10 +35,10 @@ public class Point {
         return new Point(this.point.getX() * d, this.point.getY() * d);
     }
 
-    public Point nextPoint(Point p, int t)
+    public Point nextPoint(Point p, double t)
     {
-        int x = this.getPoint().getX() * (1-t) + p.getPoint().getX() * t;
-        int y = this.getPoint().getY() * (1-t) + p.getPoint().getY() * t;
+        int x = (int) (this.getPoint().getX() * (1-t) + p.getPoint().getX() * t);
+        int y = (int) (this.getPoint().getY() * (1-t) + p.getPoint().getY() * t);
 
         return new Point(x, y);
     }
